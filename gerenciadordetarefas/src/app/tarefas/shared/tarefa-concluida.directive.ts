@@ -1,11 +1,11 @@
 import { Directive ,ElementRef, Input, OnInit} from '@angular/core';
 
 @Directive({
-  selector: '[appTarefaConcluda]'
+  selector: '[tarefaConcluida]'
 })
-export class TarefaConcludaDirective  implements OnInit{
+export class TarefaConcluidaDirective  implements OnInit{
 @Input() tarefaConcluida:boolean;
-  constructor(private el:ElmentRef) { }
+  constructor(private el:ElementRef) { }
 
   ngOnInit(){
   	if(this.tarefaConcluida){

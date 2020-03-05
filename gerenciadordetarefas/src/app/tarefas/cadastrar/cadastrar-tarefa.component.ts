@@ -4,8 +4,7 @@ import { NgForm } from '@angular/forms';
 
 import {TarefaService, Tarefa} from '../shared';
 
-@ViewChild('formTarefa') formTarefa: NgForm;
-tarefa: Tarefa;
+
 @Component({
   selector: 'app-cadastrar-tarefa',
   templateUrl: './cadastrar-tarefa.component.html',
@@ -13,6 +12,8 @@ tarefa: Tarefa;
 })
 export class CadastrarTarefaComponent implements OnInit {
 
+  @ViewChild('formTarefa') formTarefa: NgForm;
+tarefa: Tarefa;
   constructor(
   	private tarefaService: TarefaService,
   	private router: Router) { }

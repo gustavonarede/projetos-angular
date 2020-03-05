@@ -10,7 +10,7 @@ import { TarefaService, Tarefa} from '../shared';
 export class EditarTarefaComponent implements OnInit {
 
 	@ViewChild('formTarefa') formTarefa: NgForm;
-	tarea: Tarefa;
+	tarefa: Tarefa;
 
   constructor(
   	private tarefaService: TarefaService,
@@ -19,7 +19,7 @@ export class EditarTarefaComponent implements OnInit {
 
   ngOnInit(): void {
   	const id = +this.route.snapshot.params['id'];
-  	this.tarefa this.tarefaService.buscarPorId(id);
+  	this.tarefa =this.tarefaService.buscarPorId(id);
   }
 
   atualizar():void{
